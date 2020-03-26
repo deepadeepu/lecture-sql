@@ -38,17 +38,7 @@ body{
 </h1>
 
 
-<form action="{{ url_for('admin') }}" method="post">
-
-  <ul>
-    {% for flight in flights %}
-    <li>
-
-        {{ flight.origin }} to {{ flight.destination }} in {{flight.duration}}
-
-  </li>
-    {% endfor %}
-  </ul>
+<form >
 
   <div style="text-align:center;">
     <input type="text" name="origin" placeholder="origin" width="30px" > <br><br>
