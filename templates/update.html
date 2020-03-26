@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin</title>
+
+  <style>
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container>div{
+    background-color: springgreen;
+    font-size: :20px;
+    margin:20px;
+    padding: 20px;
+    width: 60px;
+  }
+  @media(min-width:600px)
+  {
+    body{
+      background-color: white;
+    }
+
+  }
+@media(max-width:599px)
+{
+body{
+  background-color: teal;
+}
+
+}
+  </style>
+  </head>
+  <body>
+     <h1 style="text-align:center">
+    Flight Details
+</h1>
+
+
+<form action="{{ url_for('admin') }}" method="post">
+
+  <ul>
+    {% for flight in flights %}
+    <li>
+
+        {{ flight.origin }} to {{ flight.destination }} in {{flight.duration}}
+
+  </li>
+    {% endfor %}
+  </ul>
+
+
+
+<body>
+
+</body>
+</html>
